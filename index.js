@@ -48,7 +48,7 @@
   const heroSlides = document.querySelectorAll('.hero-slide');
   const heroDotsWrap = document.getElementById('heroDots');
   let heroIdx = 0;
-  const HERO_INTERVAL = 1500;
+  const HERO_INTERVAL = 5000;
 
   heroSlides.forEach((_, i)=>{
     const dot = document.createElement('button');
