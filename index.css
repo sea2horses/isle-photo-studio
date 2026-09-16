@@ -27,7 +27,7 @@
   }
   .max-wrap{max-width:1560px;margin-left:auto;margin-right:auto;}
   h1,h2,h3,h4{
-    font-family:'Fraunces',serif;
+    font-family:'Inter',serif;
     font-weight:600;
     margin:0;
     letter-spacing:-0.01em;
@@ -64,7 +64,7 @@
   .nav-brand{display:flex;align-items:center;gap:10px;}
   .nav-brand img{height:38px;width:34px;object-fit:cover;object-position:center 20%;flex-shrink:0;}
   .nav-brand .wordmark{
-    font-family:'Fraunces',serif;font-weight:600;font-size:16.5px;
+    font-family:'Inter',serif;font-weight:600;font-size:16.5px;
     letter-spacing:0.02em; line-height:1.1;
   }
   .nav-brand .wordmark small{
@@ -267,7 +267,7 @@
   .promo-card .scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,28,25,0) 42%, rgba(15,22,20,0.9) 100%);}
   .promo-card .body{position:absolute;left:0;right:0;bottom:0;padding:13px;color:var(--white);z-index:2;}
   .promo-card .tag{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blush);font-weight:700;}
-  .promo-card h4{font-size:15px;margin:3px 0 3px;color:var(--white);font-family:'Fraunces',serif;line-height:1.1;}
+  .promo-card h4{font-size:15px;margin:3px 0 3px;color:var(--white);font-family:'Inter',serif;line-height:1.1;}
   .promo-card h4,.promo-card .tag,.promo-card .price{font-family:'Inter',sans-serif;font-style:normal;}
   .promo-card .price{font-size:11px;font-weight:700;}
   .promo-card .go{
@@ -304,7 +304,7 @@
   .about-collage .badge{
     position:absolute;top:10%;right:6%;z-index:4;width:118px;height:118px;border-radius:50%;
     background:var(--blush-deep);color:var(--white);display:flex;align-items:center;justify-content:center;
-    text-align:center;font-family:'Fraunces',serif;font-size:13px;line-height:1.3;padding:10px;
+    text-align:center;font-family:'Inter',serif;font-size:13px;line-height:1.3;padding:10px;
     box-shadow:var(--shadow);animation:spin 22s linear infinite;
   }
   .about-collage .badge b{display:block;font-size:22px;}
@@ -316,7 +316,7 @@
   .about-text h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:20px;line-height:1.12;}
   .about-text p{font-size:15.5px;line-height:1.75;color:rgba(26,35,31,0.78);max-width:520px;}
   .about-stats{display:flex;gap:36px;margin-top:34px;flex-wrap:wrap;}
-  .about-stats div b{font-family:'Fraunces',serif;font-size:30px;display:block;color:var(--teal-deep);}
+  .about-stats div b{font-family:'Inter',serif;font-size:30px;display:block;color:var(--teal-deep);}
   .about-stats div span{font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(26,35,31,0.6);}
 
   /* ---------- SERVICES ---------- */
@@ -410,7 +410,7 @@
   .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1200px;margin:0 auto;}
   .review-card{border:1px solid var(--line);padding:clamp(24px,3vw,38px);min-height:270px;display:flex;flex-direction:column;background:var(--white);}
   .review-card .stars{color:var(--blush-deep);letter-spacing:.16em;font-size:13px;}
-  .review-card blockquote{font-family:'Fraunces',serif;font-size:clamp(19px,2vw,24px);line-height:1.3;margin:28px 0;flex:1;}
+  .review-card blockquote{font-family:'Inter',serif;font-size:clamp(19px,2vw,24px);line-height:1.3;margin:28px 0;flex:1;}
   .review-card p{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--teal-mid);}
 
   /* ---------- BOOKING ---------- */
@@ -471,7 +471,7 @@
   .footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(246,241,231,0.18);max-width:1560px;margin-left:auto;margin-right:auto;}
   .footer-brand{display:flex;align-items:center;gap:12px;}
   .footer-brand img{height:38px;width:auto;}
-  .footer-brand .wordmark{font-family:'Fraunces',serif;font-size:19px;font-weight:600;}
+  .footer-brand .wordmark{font-family:'Inter',serif;font-size:19px;font-weight:600;}
   .footer-brand .wordmark small{display:block;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blush);}
   .footer-cols{display:flex;gap:60px;flex-wrap:wrap;}
   .footer-col h4{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blush);margin-bottom:14px;}
