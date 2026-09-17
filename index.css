@@ -141,16 +141,16 @@
   /* Focal points: first value is horizontal, second is vertical. */
   .hero-slide:nth-child(1){--focus:50% 48%;--focus-mobile:50% 46%;}
   .hero-slide:nth-child(2){--focus:55% 52%;--focus-mobile:55% 50%;}
-  .hero-slide:nth-child(3){--focus:60% 52%;--focus-mobile:62% 50%;}
+  .hero-slide:nth-child(3){--focus:30% 52%;--focus-mobile:42% 30%;}
   .hero-slide:nth-child(4){--focus:67% 54%;--focus-mobile:68% 52%;}
-  .hero-slide:nth-child(5){--focus:23% 52%;--focus-mobile:22% 50%;}
+  .hero-slide:nth-child(5){--focus:23% 52%;--focus-mobile:0% 50%;}
   .hero-slide:nth-child(6){--focus:50% 42%;--focus-mobile:50% 40%;}
   .hero-slide:nth-child(7){--focus:52% 50%;--focus-mobile:52% 48%;}
-  .hero-slide:nth-child(8){--focus:49% 50%;--focus-mobile:48% 48%;}
-  .hero-slide:nth-child(9){--focus:48% 48%;--focus-mobile:48% 46%;}
-  .hero-slide:nth-child(10){--focus:44% 46%;--focus-mobile:44% 44%;}
-  .hero-slide:nth-child(11){--focus:52% 46%;--focus-mobile:52% 44%;}
-  .hero-slide:nth-child(12){--focus:55% 48%;--focus-mobile:55% 45%;}
+  .hero-slide:nth-child(8){--focus:49% 50%;--focus-mobile:18% 48%;}
+  .hero-slide:nth-child(9){--focus:48% 48%;--focus-mobile:68% 46%;}
+  .hero-slide:nth-child(10){--focus:44% 46%;--focus-mobile:14% 24%;}
+  .hero-slide:nth-child(11){--focus:52% 46%;--focus-mobile:57% 14%;}
+  .hero-slide:nth-child(12){--focus:55% 48%;--focus-mobile:45% 45%;}
   .hero-slide:nth-child(13){--focus:58% 54%;--focus-mobile:58% 52%;}
   .hero-slide:nth-child(14){--focus:50% 40%;--focus-mobile:50% 38%;}
   @keyframes heroFade{from{opacity:0;}to{opacity:1;}}
