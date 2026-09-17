@@ -138,22 +138,21 @@
     transform-origin:var(--focus, var(--hero-pos));
     animation:heroZoom 12s ease-in-out infinite alternate;
   }
-  /* Per-image focal points keep the subject inside responsive crops. */
-  .hero-slide:nth-child(1){--focus:50% 58%;--focus-mobile:50% 55%;}
-  .hero-slide:nth-child(2){--focus:50% 55%;--focus-mobile:50% 55%;}
-  .hero-slide:nth-child(3){--focus:55% 60%;--focus-mobile:55% 58%;}
-  .hero-slide:nth-child(4){--focus:48% 58%;--focus-mobile:43% 55%;}
-  .hero-slide:nth-child(5){--focus:59% 58%;--focus-mobile:59% 54%;}
-  .hero-slide:nth-child(6){--focus:24% 58%;--focus-mobile:22% 54%;}
-  .hero-slide:nth-child(7){--focus:50% 36%;--focus-mobile:50% 34%;}
-  .hero-slide:nth-child(8){--focus:50% 58%;--focus-mobile:50% 54%;}
-  .hero-slide:nth-child(9){--focus:37% 54%;--focus-mobile:36% 50%;}
-  .hero-slide:nth-child(10){--focus:57% 52%;--focus-mobile:57% 48%;}
-  .hero-slide:nth-child(11){--focus:37% 45%;--focus-mobile:34% 42%;}
-  .hero-slide:nth-child(12){--focus:50% 48%;--focus-mobile:50% 45%;}
-  .hero-slide:nth-child(13){--focus:54% 45%;--focus-mobile:54% 42%;}
-  .hero-slide:nth-child(14){--focus:65% 54%;--focus-mobile:66% 50%;}
-  .hero-slide:nth-child(15){--focus:50% 38%;--focus-mobile:50% 36%;}
+  /* Focal points: first value is horizontal, second is vertical. */
+  .hero-slide:nth-child(1){--focus:50% 48%;--focus-mobile:50% 46%;}
+  .hero-slide:nth-child(2){--focus:55% 52%;--focus-mobile:55% 50%;}
+  .hero-slide:nth-child(3){--focus:60% 52%;--focus-mobile:62% 50%;}
+  .hero-slide:nth-child(4){--focus:67% 54%;--focus-mobile:68% 52%;}
+  .hero-slide:nth-child(5){--focus:23% 52%;--focus-mobile:22% 50%;}
+  .hero-slide:nth-child(6){--focus:50% 42%;--focus-mobile:50% 40%;}
+  .hero-slide:nth-child(7){--focus:52% 50%;--focus-mobile:52% 48%;}
+  .hero-slide:nth-child(8){--focus:49% 50%;--focus-mobile:48% 48%;}
+  .hero-slide:nth-child(9){--focus:48% 48%;--focus-mobile:48% 46%;}
+  .hero-slide:nth-child(10){--focus:44% 46%;--focus-mobile:44% 44%;}
+  .hero-slide:nth-child(11){--focus:52% 46%;--focus-mobile:52% 44%;}
+  .hero-slide:nth-child(12){--focus:55% 48%;--focus-mobile:55% 45%;}
+  .hero-slide:nth-child(13){--focus:58% 54%;--focus-mobile:58% 52%;}
+  .hero-slide:nth-child(14){--focus:50% 40%;--focus-mobile:50% 38%;}
   @keyframes heroFade{from{opacity:0;}to{opacity:1;}}
   @keyframes heroZoom{from{transform:scale(1.0);}to{transform:scale(1.1);}}
   .hero-media::after{
@@ -185,7 +184,7 @@
     .hero{--hero-pos: 50% 28%;}
   }
   @media (max-width:600px){
-    .hero{--hero-pos:50% 25%;min-height:min(620px,100svh);max-height:760px;}
+    .hero{--hero-pos:50% 25%;height:82svh;min-height:560px;max-height:680px;}
     .hero-media img{object-position:var(--focus-mobile, var(--focus, var(--hero-pos)));transform-origin:var(--focus-mobile, var(--focus, var(--hero-pos)));}
     .hero-content{padding-bottom:clamp(60px,14vw,90px);gap:16px;}
     .hero-overlay{background:linear-gradient(0deg, rgba(5,15,15,.88) 0%, rgba(5,15,15,.56) 54%, rgba(5,15,15,.24) 100%);}
@@ -200,12 +199,12 @@
   .hero-title{
     font-size:clamp(40px,7vw,84px);line-height:0.98;max-width:920px;
     text-shadow:0 3px 24px rgba(0,0,0,.42);
-    opacity:0;animation:fadeUp 1s ease .5s forwards;
+    opacity:0;animation:fadeUp 1s ease .7s forwards;
   }
   .hero-title em{font-style:italic;font-weight:500;color:var(--blush);}
   .hero-sub{
     font-size:clamp(15px,1.6vw,18px);max-width:480px;color:rgba(255,253,249,0.86);
-    line-height:1.6;text-shadow:0 2px 14px rgba(0,0,0,.48);opacity:0;animation:fadeUp 1s ease .7s forwards;
+    line-height:1.6;text-shadow:0 2px 14px rgba(0,0,0,.48);opacity:0;animation:fadeUp 1s ease .5s forwards;
   }
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp 1s ease .9s forwards;}
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
@@ -262,6 +261,12 @@
   .promo-card .photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
   .promo-card .photo img[src*="headshot"],
   .promo-card .photo img[src*="studio-portrait"]{object-position:center 24%;}
+  .promo-card .photo img[src*="pregnancy"]{object-position:52% 35%;}
+  .promo-card .photo img[src*="engagement"]{object-position:54% center;}
+  .promo-card .photo img[src*="wedding"]{object-position:center 30%;}
+  .promo-card .photo img[src*="sweet-fifteen"]{object-position:center 24%;}
+  .promo-card .photo img[src*="family"]{object-position:52% center;}
+  .promo-card .photo img[src*="seasonal"]{object-position:center 32%;}
   .promo-card:hover .photo img{transform:scale(1.07);}
   .promo-card.no-photo .photo{background:linear-gradient(150deg,var(--teal-deep),var(--teal-mid) 60%, var(--sage) 130%);}
   .promo-card .scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,28,25,0) 42%, rgba(15,22,20,0.9) 100%);}
@@ -348,6 +353,11 @@
   .service-card .photo img[src*="studio-portrait"],
   .service-card .photo img[src*="sweet-fifteen"]{object-position:center 22%;}
   .service-card .photo img[src*="real-estate"]{object-position:center;}
+  .service-card .photo img[src*="pregnancy"]{object-position:52% 36%;}
+  .service-card .photo img[src*="engagement"]{object-position:54% center;}
+  .service-card .photo img[src*="family"]{object-position:52% center;}
+  .service-card .photo img[src*="seasonal"]{object-position:center 32%;}
+  .service-card .photo img[src*="garden-wedding"]{object-position:center 28%;}
   .service-card:hover .photo img{transform:scale(1.06);}
   .service-card.no-photo .photo{
     background:linear-gradient(150deg,var(--teal-deep),var(--teal-mid) 60%, var(--sage) 130%);
@@ -519,7 +529,7 @@
     .nav-brand .wordmark small{display:none;}
     .lang-toggle button{padding:5px 9px;font-size:11px;}
     .service-grid{grid-template-columns:1fr;}
-    .service-card{aspect-ratio:4/5 !important;}
+    .service-card{aspect-ratio:4/5 !important;max-height:520px;}
     .promo-card{width:132px;}
     .about-stats{gap:22px;}
     .footer-cols{gap:34px;}
@@ -534,7 +544,9 @@
     .review-card blockquote{margin:20px 0;}
     .filmstrip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;}
     .filmstrip figure{flex:0 0 min(78vw,310px);scroll-snap-align:center;}
-    .filmstrip img{aspect-ratio:4/5;}
+    .filmstrip img{aspect-ratio:4/5;max-height:440px;}
+    .about-collage{height:min(88vw,390px);max-height:390px;}
+    .promo-card{max-height:180px;}
   }
 
   @media (prefers-reduced-motion: reduce){
