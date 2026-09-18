@@ -481,11 +481,10 @@
                         Reserve your date.
                     </h2>
                     <p
-                        data-en="Pick your session type and pick a time that works for you — you'll get an instant confirmation by email, no back-and-forth needed."
-                        data-es="Elige el tipo de sesión y el horario que mejor te funcione — recibirás la confirmación al instante por correo, sin ida y vuelta de mensajes."
+                        data-en="Pick a service, choose a date and send us your details — we'll confirm your session by email within a day."
+                        data-es="Elige un servicio, selecciona una fecha y envíanos tus datos — confirmaremos tu sesión por correo en menos de un día."
                     >
-                        Pick your session type and pick a time that works for
-                        you.
+                        Pick a service, choose a date and send us your details.
                     </p>
                     <div class="booking-contact">
                         <a href="tel:+17862746898"
@@ -510,28 +509,69 @@
                         >
                     </div>
                 </div>
-                <div class="booking-card">
-                    <div class="calendly-wrap">
-                        <!-- Calendly inline widget begin -->
-                        <div
-                            class="calendly-inline-widget"
-                            data-url="https://calendly.com/islephotostudio?background_color=f6f1e7&amp;primary_color=d9825f"
-                        ></div>
-                        <script
-                            async=""
-                            src="https://assets.calendly.com/assets/external/widget.js"
-                            type="text/javascript"
-                        ></script>
-                        <!-- Calendly inline widget end -->
+                <div class="form-card">
+                    <form id="bookingForm">
+                        <div class="form-row">
+                            <div class="field">
+                                <label data-en="Full name" data-es="Nombre completo" for="fName">Full name</label>
+                                <input id="fName" required type="text" />
+                            </div>
+                            <div class="field">
+                                <label data-en="Phone" data-es="Teléfono" for="fPhone">Phone</label>
+                                <input id="fPhone" required type="tel" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field full">
+                                <label data-en="Email" data-es="Correo electrónico" for="fEmail">Email</label>
+                                <input id="fEmail" required type="email" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field full">
+                                <label data-en="Service" data-es="Servicio" for="fService">Service</label>
+                                <select id="fService" required>
+                                    <option data-en="Select a service" data-es="Selecciona un servicio" value="">Select a service</option>
+                                    <option value="Pregnancy">Pregnancy — $190</option>
+                                    <option value="Engagement">Engagement — $300</option>
+                                    <option value="At-Home Photo Shoot">At-Home Photo Shoot — $300</option>
+                                    <option value="Headshots">Headshots — $100</option>
+                                    <option value="Seasonal Mini Session">Seasonal Mini Session — $120</option>
+                                    <option value="Studio Session">Studio Session — from $120</option>
+                                    <option value="Sweet Fifteen">Sweet Fifteen — $600–$1000</option>
+                                    <option value="Wedding">Wedding — custom quote</option>
+                                    <option value="Real Estate">Real Estate — from $400</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cal-block">
+                            <div class="cal-head">
+                                <div class="cal-nav"><button id="calPrev" type="button" aria-label="Previous month">‹</button></div>
+                                <div class="cal-title" id="calTitle">Month Year</div>
+                                <div class="cal-nav"><button id="calNext" type="button" aria-label="Next month">›</button></div>
+                            </div>
+                            <div class="cal-grid" id="calGrid"></div>
+                            <div class="slot-row">
+                                <button class="slot" data-en="Morning" data-es="Mañana" data-slot="Morning (9–11am)" type="button">Morning</button>
+                                <button class="slot" data-en="Midday" data-es="Mediodía" data-slot="Midday (12–2pm)" type="button">Midday</button>
+                                <button class="slot" data-en="Golden hour" data-es="Hora dorada" data-slot="Golden hour (5–7pm)" type="button">Golden hour</button>
+                            </div>
+                            <div class="selected-summary" id="selectedSummary"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field full">
+                                <label data-en="Tell us about your session (optional)" data-es="Cuéntanos sobre tu sesión (opcional)" for="fMessage">Tell us about your session (optional)</label>
+                                <textarea id="fMessage"></textarea>
+                            </div>
+                        </div>
+                        <button class="btn btn-blush submit-btn" data-en="Send booking request →" data-es="Enviar solicitud de reserva →" type="submit">Send booking request →</button>
+                        <p class="form-note" data-en="We'll open your email app with the booking details ready to send." data-es="Abriremos tu aplicación de correo con los datos de la reserva listos para enviar.">We'll open your email app with the booking details ready to send.</p>
+                    </form>
+                    <div class="success-panel" id="successPanel">
+                        <div class="mark">✉</div>
+                        <h3 data-en="Almost there!" data-es="¡Ya casi!">Almost there!</h3>
+                        <p data-en="Your email app opened with the booking details. Send the email and we'll confirm your session shortly." data-es="Tu aplicación de correo se abrió con los datos de la reserva. Envía el correo y confirmaremos tu sesión pronto.">Your email app opened with the booking details.</p>
                     </div>
-                    <p
-                        class="booking-note"
-                        data-en="Powered by Calendly — pick a date and time and it's locked in."
-                        data-es="Con Calendly — elige fecha y hora y queda reservado al instante."
-                    >
-                        Powered by Calendly — pick a date and time and it's
-                        locked in.
-                    </p>
                 </div>
             </div>
         </section>

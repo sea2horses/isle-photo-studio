@@ -450,33 +450,39 @@
   .booking-contact a:hover{color:var(--blush);}
   .booking-contact a:hover .ic{border-color:var(--blush);}
 
-  /* ---------- CALENDLY BOOKING CARD ---------- */
-  .booking-card{
-    background:var(--white);color:var(--ink);border-radius:12px;padding:clamp(10px,1.5vw,18px);
-    box-shadow:var(--shadow);
-    display:flex;flex-direction:column;
-    border:1px solid rgba(255,255,255,.28);
-  }
-  .calendly-wrap{
-    position:relative;width:100%;
-    border-radius:8px;overflow:hidden;background:var(--sand);
-  }
-  .calendly-inline-widget{
-    width:100% !important;
-    min-width:0 !important;
-    height:700px;
-  }
-  .booking-note{
-    font-size:11px;color:rgba(26,35,31,0.5);margin-top:12px;text-align:center;
-  }
-  @media (max-width:600px){
-    .booking-card{padding:6px;border-radius:10px;}
-    .calendly-wrap{border-radius:7px;}
-    .calendly-inline-widget{height:720px;}
-  }
-  @media (max-width:400px){
-    .calendly-inline-widget{height:690px;}
-  }
+  /* ---------- BOOKING FORM ---------- */
+  .form-card{background:var(--sand);color:var(--ink);border-radius:2px;padding:clamp(24px,3.4vw,40px);box-shadow:var(--shadow);}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--teal-deep);}
+  .field input,.field select,.field textarea{border:1px solid var(--line);background:var(--white);padding:12px 13px;font-size:16px;font-family:inherit;color:var(--ink);border-radius:1px;width:100%;transition:border-color .2s ease,box-shadow .2s ease;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal-deep);box-shadow:0 0 0 3px rgba(30,70,67,.12);outline:none;}
+  .field textarea{resize:vertical;min-height:70px;}
+  .full{grid-column:1/-1;}
+  .cal-block{margin:18px 0 20px;}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+  .cal-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .cal-nav button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--white);font-size:13px;transition:.2s;}
+  .cal-nav button:hover{background:var(--teal-deep);color:var(--white);border-color:var(--teal-deep);}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center;}
+  .cal-grid .dow{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:rgba(26,35,31,.45);font-weight:700;padding-bottom:4px;}
+  .cal-day{position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:12.5px;border-radius:50%;background:var(--white);border:1px solid transparent;cursor:pointer;transition:.2s;}
+  .cal-day.empty{visibility:hidden;cursor:default;}
+  .cal-day.disabled{color:rgba(26,35,31,.25);cursor:not-allowed;background:transparent;}
+  .cal-day:not(.disabled):not(.empty):hover{border-color:var(--teal-mid);}
+  .cal-day.selected{background:var(--blush-deep);color:var(--white);font-weight:700;}
+  .cal-day.today:not(.selected){box-shadow:inset 0 0 0 1px var(--teal-mid);}
+  .slot-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+  .slot{padding:8px 14px;border-radius:20px;border:1px solid var(--line);font-size:12px;font-weight:600;background:var(--white);transition:.2s;}
+  .slot.active{background:var(--teal-deep);color:var(--white);border-color:var(--teal-deep);}
+  .selected-summary{font-size:12.5px;color:var(--teal-deep);font-weight:600;margin-top:8px;min-height:16px;}
+  .submit-btn{width:100%;justify-content:center;margin-top:6px;padding:15px;font-size:14px;}
+  .form-note{font-size:11px;color:rgba(26,35,31,.5);margin-top:12px;text-align:center;}
+  .success-panel{display:none;text-align:center;padding:30px 10px;}
+  .success-panel.show{display:block;animation:fadeUp .5s ease;}
+  .success-panel .mark{width:56px;height:56px;border-radius:50%;background:var(--teal-deep);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:24px;}
+  .success-panel h3{font-size:20px;margin-bottom:8px;}
+  .success-panel p{font-size:13.5px;color:rgba(26,35,31,.7);max-width:340px;margin:0 auto;}
 
   /* ---------- FOOTER ---------- */
   footer{
@@ -505,6 +511,7 @@
     .filmstrip{grid-template-columns:repeat(2,minmax(0,1fr));}
   }
   @media (max-width:720px){
+    .form-row{grid-template-columns:1fr;}
     .nav-links{
       display:flex;flex-direction:column;gap:4px;
       position:fixed;top:0;right:0;height:100vh;height:100dvh;width:min(78vw,320px);
