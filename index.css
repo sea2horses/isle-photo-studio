@@ -207,6 +207,12 @@
     line-height:1.6;text-shadow:0 2px 14px rgba(0,0,0,.48);opacity:0;animation:fadeUp 1s ease .5s forwards;
   }
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp 1s ease .9s forwards;}
+  @media (orientation:portrait){
+    .hero-eyebrow{order:0;}
+    .hero-title{order:1;}
+    .hero-sub{order:2;}
+    .hero-cta{order:3;}
+  }
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
   .tide{position:absolute;bottom:0;left:0;width:100%;height:64px;z-index:2;opacity:.9;}
